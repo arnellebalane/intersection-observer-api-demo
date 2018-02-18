@@ -1,20 +1,25 @@
 (() => {
 
-    function logEntries(label) {
+    function logEntries(root) {
+        const intersectionRatio = root.querySelector('.latest-log .ratio span');
+        const isIntersecting = root.querySelector('.latest-log .intersecting span');
+
         return (entries) => {
             entries.forEach(entry => {
-                console.log(label, entry.intersectionRatio, entry.isIntersecting);
+                intersectionRatio.textContent = entry.intersectionRatio;
+                isIntersecting.textContent = entry.isIntersecting;
             });
         };
     }
 
-    const observableOne = document.querySelector('.demo-wrapper:nth-child(1) .observed-box');
-    const observerOne = new IntersectionObserver(logEntries('one'));
+    const rootOne = document.querySelector('.demo-wrapper:nth-child(1)');
+    const observableOne = rootOne.querySelector('.observed-box');
+    const observerOne = new IntersectionObserver(logEntries(rootOne));
     observerOne.observe(observableOne);
 
     const rootTwo = document.querySelector('.demo-wrapper:nth-child(2)');
     const observableTwo = rootTwo.querySelector('.observed-box');
-    const observerTwo = new IntersectionObserver(logEntries('two'), {
+    const observerTwo = new IntersectionObserver(logEntries(rootTwo), {
         root: rootTwo,
         threshold: 0.5
     });
@@ -22,7 +27,7 @@
 
     const rootThree = document.querySelector('.demo-wrapper:nth-child(3)');
     const observableThree = rootThree.querySelector('.observed-box');
-    const observerThree = new IntersectionObserver(logEntries('three'), {
+    const observerThree = new IntersectionObserver(logEntries(rootThree), {
         root: rootThree,
         threshold: [0, 0.25, 0.5, 0.75, 1]
     });
@@ -30,7 +35,7 @@
 
     const rootFour = document.querySelector('.demo-wrapper:nth-child(4)');
     const observableFour = rootFour.querySelector('.observed-box');
-    const observerFour = new IntersectionObserver(logEntries('four'), {
+    const observerFour = new IntersectionObserver(logEntries(rootFour), {
         threshold: [0, 0.25, 0.5, 0.75, 1]
     });
     observerFour.observe(observableFour);
