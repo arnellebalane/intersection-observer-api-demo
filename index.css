@@ -19,27 +19,37 @@ body {
     height: 100vh;
     flex-grow: 1;
     min-width: 300px;
-    overflow: auto;
+    overflow-x: hidden;
+    overflow-y: auto;
 }
 
-.demo-wrapper:nth-child(1) {
+.demo-wrapper-1 {
     color: #7a3d37;
     background-color: #e8c21c;
 }
 
-.demo-wrapper:nth-child(2) {
+.demo-wrapper-2 {
     color: #25b3e7;
     background-color: #1a508b;
 }
 
-.demo-wrapper:nth-child(3) {
+.demo-wrapper-3 {
     color: #f9f6e6;
     background-color: #dc3e47;
 }
 
-.demo-wrapper:nth-child(4) {
+.demo-wrapper-4 {
     color: #c9635f;
     background-color: #603346;
+}
+
+.demo-wrapper-3,
+.demo-wrapper-4 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
 }
 
 .dummy-content {
