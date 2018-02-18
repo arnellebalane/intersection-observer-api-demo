@@ -8,3 +8,53 @@ body {
     min-height: 100vh;
     margin: 0;
 }
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    height: 100vh;
+}
+
+.demo-wrapper {
+    height: 100vh;
+    flex-grow: 1;
+    min-width: 300px;
+    overflow: auto;
+}
+
+.demo-wrapper:nth-child(1) {
+    color: #7a3d37;
+    background-color: #e8c21c;
+}
+
+.demo-wrapper:nth-child(2) {
+    color: #25b3e7;
+    background-color: #1a508b;
+}
+
+.demo-wrapper:nth-child(3) {
+    color: #f9f6e6;
+    background-color: #dc3e47;
+}
+
+.demo-wrapper:nth-child(4) {
+    color: #c9635f;
+    background-color: #603346;
+}
+
+.dummy-content {
+    padding: 120vh 0;
+}
+
+.observed-box {
+    width: 70%;
+    max-width: 400px;
+    margin: 0 auto;
+    background-color: currentColor;
+}
+
+.observed-box::before {
+    content: "";
+    display: block;
+    padding-top: 100%;
+}
