@@ -36,7 +36,8 @@
     const rootFour = document.querySelector('.demo-wrapper:nth-child(4)');
     const observableFour = rootFour.querySelector('.observed-box');
     const observerFour = new IntersectionObserver(logEntries(rootFour), {
-        threshold: [0, 0.25, 0.5, 0.75, 1]
+        root: document.body,
+        threshold: [0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1]
     });
     observerFour.observe(observableFour);
 

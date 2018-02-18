@@ -13,7 +13,7 @@
         <div class="container">
             <div class="demo-wrapper demo-wrapper-1">
                 <div class="details">
-                    <p>root: viewport</p>
+                    <p>root: viewport (default)</p>
                     <p>thresholds: 0 (default)</p>
                     <div class="latest-log">
                         <p class="ratio">intersectionRatio: <span>0</span></p>
@@ -36,6 +36,7 @@
                     </div>
                 </div>
                 <div class="scrollable">
+                    <div class="blocker"></div>
                     <div class="dummy-content">
                         <div class="observed-box"></div>
                     </div>
@@ -56,14 +57,15 @@
             </div>
             <div class="demo-wrapper demo-wrapper-4">
                 <div class="details">
-                    <p>root: viewport</p>
-                    <p>thresholds: [0, 0.25, 0.5, 0.75, 1]</p>
+                    <p>root: &lt;body&gt;</p>
+                    <p>thresholds: [0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1]</p>
                     <div class="latest-log">
                         <p class="ratio">intersectionRatio: <span>0</span></p>
                         <p class="intersecting">isIntersecting: <span>false</span></p>
                     </div>
                 </div>
                 <div class="scrollable">
+                    <div class="blocker"></div>
                     <div class="observed-box draggable"></div>
                 </div>
             </div>

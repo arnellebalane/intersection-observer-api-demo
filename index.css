@@ -143,3 +143,30 @@ body {
     content: "latest entry";
     margin-left: -16px;
 }
+
+.blocker {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 150px;
+    padding: 32px;
+    border: 1px dashed currentColor;
+    position: absolute;
+    left: 10%;
+    right: 10%;
+    bottom: 100px;
+    z-index: 1;
+}
+
+.blocker::before {
+    content: "I'm just in here to block the box :)";
+    text-align: center;
+}
+
+.demo-wrapper-2 .blocker {
+    background-color: #1a508b;
+}
+
+.demo-wrapper-4 .blocker {
+    background-color: #603346;
+}
