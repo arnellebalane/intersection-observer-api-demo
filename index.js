@@ -29,6 +29,7 @@
     const observableThree = rootThree.querySelector('.observed-box');
     const observerThree = new IntersectionObserver(logEntries(rootThree), {
         root: rootThree,
+        rootMargin: '-50px',
         threshold: [0, 0.25, 0.5, 0.75, 1]
     });
     observerThree.observe(observableThree);
